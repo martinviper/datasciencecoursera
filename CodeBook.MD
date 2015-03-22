@@ -25,3 +25,5 @@ Transformations inside data_merge() function that are made on the variables (dat
 -	merging data for training data set into ‘training_data’ data table variable with our new column names (subject, activity, activity id) and other 541 variables
 -	merging data for test data set into ‘test_data’ data table variable with our new column names (subject, activity, activity id) and other 541 variables variables
 -	merging ‘training_data’ and ‘test_data’ into ‘merged_data’ variable as an output
+
+### read_measurements()
