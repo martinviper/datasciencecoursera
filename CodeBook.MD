@@ -9,13 +9,13 @@ Main variable used is called ‘merged_data’ and it is a data table that conta
 We use 3 different functions in order to process data until we get tidy data set. These functions are called: data_merge(),read_measurements() and set_tidy_data_set().
 
 For data_merge() function INPUT data is taken from the following files:
-•	train/y_train.txt to create variable ‘training_y’ holding data names inside this training set
-•	test/y_test.txt to create variable ‘test_y’ holding data names inside this test set. 
-•	train/X_train.txt loaded into ‘training_data’ variable holding 541 columns of raw training set data
-•	test/X_test.txt loaded into ‘test_data’ variable holding 541 columns of raw test set data
-•	activities.txt loaded into ‘activity_names’ variable holding activity types like ‘WALKING’, ‘SITTING’, etc.
-•	train/subject_train.txt loaded into ‘training_subject’ variable holding subject’s training data set
-•	test/subject_test.txt loaded into ‘test_subject’ variable holding subject’s test data set
+-	train/y_train.txt to create variable ‘training_y’ holding data names inside this training set
+-	test/y_test.txt to create variable ‘test_y’ holding data names inside this test set. 
+-	train/X_train.txt loaded into ‘training_data’ variable holding 541 columns of raw training set data
+-	test/X_test.txt loaded into ‘test_data’ variable holding 541 columns of raw test set data
+-	activities.txt loaded into ‘activity_names’ variable holding activity types like ‘WALKING’, ‘SITTING’, etc.
+-	train/subject_train.txt loaded into ‘training_subject’ variable holding subject’s training data set
+-	test/subject_test.txt loaded into ‘test_subject’ variable holding subject’s test data set
 
 Transformations inside data_merge() function that are made on the variables (datasets) shown above include:
 •	merging data for training activity names into ‘y_training_names’ variable (input data in ‘training_y’ variable gives us only numeric values like: 2,3 and we want proper names)
