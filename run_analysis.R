@@ -71,8 +71,8 @@ read_measurements <- function(merged_data) {
 
 ### 5) Creating independent tidy data set with the average of each variable
 ### for each activity and each subject
-set_tidy_data_set <- function(merged_data) {
-    our_data <- melt(merged_data, id=c("Subject","Activity_ID","Activity"))
+set_tidy_data_set <- function(measurements) {
+    our_data <- melt(measurements, id=c("Subject","Activity_ID","Activity"))
     ## using dcast function from reshape module to get tidy data format
     tidy_data <- dcast(our_data, formula = Subject + Activity_ID + Activity ~ variable, mean)
     ## formating column names in our tidy data set
