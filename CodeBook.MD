@@ -9,7 +9,7 @@ We use 3 different functions in order to process data until we get tidy data set
 - read_measurements()
 - set_tidy_data_set()
 
-## data_merge()
+### data_merge()
 For data_merge() function INPUT data is taken from the following files:
 -	train/y_train.txt to create variable ‘training_y’ holding data names inside this training set
 -	test/y_test.txt to create variable ‘test_y’ holding data names inside this test set. 
