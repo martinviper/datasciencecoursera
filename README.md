@@ -18,4 +18,8 @@ Requirements for the project are:
 This function merges all required input data available for this project from various text files into a single data set outputted as ‘merged_data’. It should contain observations of training and test data sets for all variables with additional columns (subject, activity, activity id).
 
 ### read_measurements()
-This function subsets ‘merged_data’ outputted by previous function (takes it as an INPUT data) to get only related data from mean and standard deviation columns. Output data should be a subset of training and test data holding observations of lesser number of variables (including variables for column headers having ‘mean()’ and ‘std()’ names in it)
+This function subsets ‘merged_data’ outputted by previous function (takes it as an INPUT data) to get only related data from mean and standard deviation columns. Output data should be a subset of training and test data holding observations of lesser number of variables (including variables for column headers having ‘mean()’ and ‘std()’ names in it).
+
+### set_tidy_data_set()
+This function melts output data from read_measurements() function and casts it back to tidy data format. As a result we get data written out as a table to a text file called: ‘tidy_data_set.txt’.
+
