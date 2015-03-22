@@ -30,10 +30,19 @@ Transformations inside data_merge() function that are made on the variables (dat
 For read_measurements() function INPUT data is taken from the following files:
 - features.txt to create variable ‘features_data’ holding features names
 
-Transformations inside read_measurements () function includes modifications on the following variables:
+Transformations inside read_measurements() function includes modifications on the following variables:
 - subsetting data from the ‘features_data’ variable into  ‘mean_std_measurements’ variable to keep only columns for: mean() and std()
 - adding 3 new columns with their header names (subject, activity, activity id) to ‘merged_data’ data set variable being output from ‘data_merge()’ function
 - extracting ‘mean()’ columns from ‘merged_data’ data set into ‘mean_cols’ variable
 - extracting ‘std()’ columns from ‘merged_data’ data set into ‘std_cols’ variable
 - creating ‘columns’ vector for holding ‘mean’ and ‘std’ columns
 - merging all above data into data table called ‘measurements’ which contains ‘merged_data’ plus 3 additional columns (subject, activity, activity id) and all ‘mean’ and ‘std’ columns defined in ‘columns’ vector
+
+### set_tidy_data_set()
+For set_tidy_data_set() function INPUT data is taken from calls to previous functions (mentioned above).
+
+Transformations inside set_tidy_data_set() function include:
+- melting data on the 'merged_data' variable in order to get the required (correct) observations into 'our_data' data set
+- dcast-ing 'our_data' data set variable into 'tidy_data' variable in order to get means for each of the activities analyzed across different variables
+- replacing column headers (mean() into Mean, std() into Std, BodyBody with Body) by the usage of 'columns' vector variable
+- applying new column headers from above vector variable on 'tidy_data' and writing it to the table so it could be saved into file called: 'tidy_data_set.txt'
