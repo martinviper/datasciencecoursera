@@ -27,3 +27,13 @@ Transformations inside data_merge() function that are made on the variables (dat
 -	merging ‘training_data’ and ‘test_data’ into ‘merged_data’ variable as an output
 
 ### read_measurements()
+For read_measurements() function INPUT data is taken from the following files:
+- features.txt to create variable ‘features_data’ holding features names
+
+Transformations inside read_measurements () function includes modifications on the following variables:
+- subsetting data from the ‘features_data’ variable into  ‘mean_std_measurements’ variable to keep only columns for: mean() and std()
+- adding 3 new columns with their header names (subject, activity, activity id) to ‘merged_data’ data set variable being output from ‘data_merge()’ function
+- extracting ‘mean()’ columns from ‘merged_data’ data set into ‘mean_cols’ variable
+- extracting ‘std()’ columns from ‘merged_data’ data set into ‘std_cols’ variable
+- creating ‘columns’ vector for holding ‘mean’ and ‘std’ columns
+- merging all above data into data table called ‘measurements’ which contains ‘merged_data’ plus 3 additional columns (subject, activity, activity id) and all ‘mean’ and ‘std’ columns defined in ‘columns’ vector
